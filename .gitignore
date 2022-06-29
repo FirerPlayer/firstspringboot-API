@@ -9,7 +9,7 @@
 *~
 .#*
 .*.md.html
-.properties
+*.properties
 .DS_Store
 .classpath
 .factorypath
