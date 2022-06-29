@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,9 +49,9 @@ public class mainController {
         return new ResponseEntity<Usuario>(usuarioRepository.save(user), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value = "delete/{id}")
+    @DeleteMapping(value = "delete")
     @ResponseBody
-    public ResponseEntity<Usuario> delUser(@PathVariable Long id) {
+    public ResponseEntity<Usuario> delUser(@RequestParam Long id) {
         Optional<Usuario> deleted = usuarioRepository.findById(id);
         if (deleted.isPresent()) {
             usuarioRepository.delete(deleted.get());
