@@ -81,7 +81,7 @@ public class mainController {
         return new ResponseEntity<Usuario>(upUser, HttpStatus.OK);
     }
 
-    @GetMapping(value = "allusers")
+    @GetMapping(value = "fName")
     @ResponseBody
     public ResponseEntity<List<Usuario>> userByName(@RequestParam(name = "name") String name) {
 

@@ -19,7 +19,7 @@ public class Usuario implements Serializable {
 
     private String nome;
     private String email;
-    private String senha;
+    private Integer idade;
 
     public Long getId() {
         return id;
@@ -45,11 +45,12 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public Integer getIdade() {
+        return idade;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setIdade(Integer idade) {
+        this.idade = idade;
     }
+
 }
